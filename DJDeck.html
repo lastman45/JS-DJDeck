@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ Deck</title>
+    <link rel="stylesheet" href="DJDeck.css">
+</head>
+<body>
+    <div class="dj-booth">
+        <!-- Left Record Player -->
+        <div class="player" id="player-left">
+            <div class="record">
+                <div class="label"></div>
+            </div>
+            <div class="tone-arm">
+                <div class="control"></div>
+            </div>
+            <button class="select-music-btn" data-player="left">Select Music</button>
+            <input type="file" accept="audio/*" class="music-file-input" data-player="left" style="display:none">
+            <button class="btn" data-player="left"></button>
+            <div class="slider-container">
+                <input type="range" class="slider" min="0" max="1" step="0.1" value="0.7" data-player="left">
+            </div>
+            <div class="player-label">LEFT</div>
+        </div>
+
+        <!-- Right Record Player -->
+        <div class="player" id="player-right">
+            <div class="record">
+                <div class="label"></div>
+            </div>
+            <div class="tone-arm">
+                <div class="control"></div>
+            </div>
+            <button class="select-music-btn" data-player="right">Select Music</button>
+            <input type="file" accept="audio/*" class="music-file-input" data-player="right" style="display:none">
+            <button class="btn" data-player="right"></button>
+            <div class="slider-container">
+                <input type="range" class="slider" min="0" max="1" step="0.1" value="0.7" data-player="right">
+            </div>
+            <div class="player-label">RIGHT</div>
+        </div>
+    </div>
+
+    <!-- Audio elements for both players -->
+    <audio src="" class="my-song" id="song-left" preload="auto"></audio>
+    <audio src="" class="my-song" id="song-right" preload="auto"></audio>
+
+    <script src="DJDeck.js"></script>
+</body>
+</html>
